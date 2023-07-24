@@ -1002,7 +1002,7 @@ textarea::-webkit-scrollbar-thumb{
     .youtubeVideo iframe{
         width: 500px;
         height: 300px;
-        margin-bottom: 10rem;
+        margin-bottom: 2rem;
     }
 
     .about-main-data{
