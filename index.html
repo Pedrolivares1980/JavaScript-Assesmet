@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="img/flag-2105397_640.png" rel="icon" type="image/x-icon" >
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6e8e90b3ac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Discover Spain</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <!-- navbar -->
+        <nav class="nav container">
+            <!-- logo -->
+            <a href="#" class="nav_logo">
+                Discover Spain
+            </a>
+            <!-- menu navbar -->
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="#home" class="nav_link active-link">Home</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#about" class="nav_link">Society</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#popular" class="nav_link">Diversity</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#explore" class="nav_link">History</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#join" class="nav_link">Contact</a>
+                    </li>
+                </ul>
+                <!-- close button -->
+                <div class="nav_close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <!-- Clock -->
+            <div class="clock">
+                <span class="hour">00</span>
+                :
+                <span class="min">00</span>
+                :
+                <span class="sec">00</span>
+            </div>
+            <!-- toggle button -->
+            <div class="nav_toggle" id="nav-toggle">
+                <i class="ri-menu-fill"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- Main Section -->
+    <main class="main" id="main">
+        <!-- Home -->
+        <section class="home section" id="home">
+            <img src="img/Home/MADRID GRAN VI noche_23_11zon.webp" alt="Gran via Madrid" class="home_bg">
+            <div class="home_shadow"></div>
+            <div class="home_container container grid">
+                <div class="home_data">
+                    <h3 class="home_subtitle">
+                        Welcome to Spain
+                    </h3>
+                    <h1 class="home_title">
+                        A beautiful country<br> in the south of Europe!
+                    </h1>
+                    <p class="home_description">
+                        Passionate, sophisticated Spain is full of wild beauty, deep history and some of the best food you'll ever eat.<br> Life is a fiesta, and everyone's invited.
+                    </p>
+                    <button type="button" class="button" id="discover-btn">Discover More <i class="ri-arrow-right-line"></i></button>
+                </div>
+                <!-- Added discover content from javaScript -->
+                <div  id="discover_it"></div>
+            </div>
+            <!-- Cards section -->
+            <div class="home_cards" id="homeCards">
+                <div class="card beaches">
+                    <div class="face front">
+                        <img src="img/Home/cala-figuera.webp" alt="Cala Mallorca">
+                        <h3 class="home_card-title">Beaches</h3>
+                    </div>
+                    <div class="face back back-beaches">
+                        <p>Spain boasts almost 8,000 kilometres of coastline travellers can discover quaint little fishing villages or the grand seaside towns of the north. It is also home to the pristine coves lapped with turquoise water nestled between forests, like the ones in the Balearic Islands, and unspoilt, volcanic beaches in the Canary islands or the fine sand beaches of the Mediterranean.Thousands of hours of sunshine every year. What’s not to love? Its beaches are famous for their quality and environmental respect.
+                        </p>
+                    </div>
+            </div>
+            <div class="card">
+                <div class="face front">
+                    <img src="img/Home/FALLAS VALENCIA_32_11zon.webp" alt="Fallas Valencia">
+                    <h3 class="home_card-title">Popular festivities</h3>
+                </div>
+                <div class="face back ">
+                    <p>Spain hosts a number of festivals, from the well known to the quirky! Two of the most well known are San Fermin (Pamplona Bull Run) held in July and La Tomatina, held in August, which is basically the world’s biggest food fight and sees thousands of locals and tourists gather to throw tomatoes at each other! Las Fallas de Valencia (Festival of Fire) is a dazzling few days of celebration filled with pyrotechnics and firework displays. Less of a festival and more of a tradition is Concurs de Castells which takes place in Tarragona, Spain.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="face front">
+                    <img src="img/Home/FOOD MARKET.webp" alt="Food market">
+                    <h3 class="home_card-title">Gastronomy</h3>
+                </div>
+                <div class="face back">
+                    <p>Spanish cuisine is famous the world over because it is flavoursome, healthy, traditional, creative and varied, and also because of its popular restaurants and fine dining, as demonstrated by the international recognition of its chefs. An example of how healthy it is can be seen in its famed Mediterranean diet.
+                        Star ingredients include olive oil, Iberian ham and the Spanish wine, the perfect accompaniment for toasting. Rioja produces the most famous Spanish wine. but you will discover other options throughout your journey.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="face front">
+                    <img src="img/Home/pilar_19_11zon.webp" alt="Basilica del Pilar Zaragoza">
+                    <h3 class="home_card-title">Culture</h3>
+                </div>
+                <div class="face back">
+                    <p>From the first peoples and cultures that conquered the country throughout history, to the mixture of modern cultures, make the folklore and the history of the country a unique experience. Spain boasts the fourth-highest number of UNESCO World Heritage Sites, just behind China and Italy. There are 49 World Heritage Sites in the country. Visit Spain and you’ll have the chance to experience incredible additions to the list like the Alhambra, the works of Antoni Gaudí’s including La Sagrada Família and the Camino de Santiago.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="face front">
+                    <img src="img/Home/ezaro.webp" alt="#">
+                    <h3 class="home_card-title">Nature</h3>
+                </div>
+                <div class="face back">
+                    <p>The large diversity of landscapes and contrasts in Spain is surprising. What's more, this is the country with the highest number of UNESCO-designated Biosphere Reserves in the world. In Spain you can find mountains, forests and valleys; as well as volcanoes, dunes and desert areas, marshlands, lakes, cliffs, waterfalls, canyons...Unique and valuable nature that needs and to be looked after. The total surface area of natural spaces that have some form of protection in Spain spans across more than 30 million hectares.</p>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- About section -->
+        <section  id="about">
+            <div class="about-main-data">
+                <h2 class="section_title">Society <br> &amp; <br> population</h2>
+                <p class="about_description">
+                    Did you know that Spain has over 47 million inhabitants? Would it surprise you to hear that life expectancy is over 83 years, one of the world’s highest? How many official languages would you guess there are in Spain? Although Spanish (or Castilian) is the official language throughout the country, Catalan, Gallego, Euskera (Basque) and Valencian are co-official languages in their respective Autonomous Regions.
+                </p>
+                <div class="about_image">
+                    <img src="img/about/MADRID 2_24_11zon.webp" alt="Madrid centro" class="about_img">
+                    <div class="about_shadow">
+                </div>
+                <button type="button" class="button" id="societyPopulation-btn">Discover More <i class="ri-arrow-right-line"></i></button></div>
+            </div>
+            <!-- /Added societyPopulation from javaScript -->
+            <div id="societyPopulation"></div>
+        </section>
+        <!-- Popular places section -->
+        <section class="popular section" id="popular">
+            <h2 class="section_title">
+                Enjoy The Beauty <br> And Diversity
+            </h2>
+            <div class="popular_container container grid">
+                <article class="popular_card">
+                    <div class="popular_image">
+                        <img src="img/popular/teideyroque_6_11zon.webp" alt="Teide" class="popular_img">
+                        <div class="popular_shadow"></div>
+                    </div>
+                    <h2 class="popular_title">Teide</h2>
+                    <div class="popular_location">
+                        <a href="https://goo.gl/maps/u2YGwEoTzuduKfVg6" target="_blank"><i class="ri-map-pin-line"></i><span>Tenerife</span></a>
+                    </div>
+                </article>
+                <article class="popular_card">
+                    <div class="popular_image">
+                        <img src="img/popular/Catedral Palma noche.webp" alt="Mallorca cathedral" class="popular_img">
+                        <div class="popular_shadow"></div>
+                    </div>
+                    <h2 class="popular_title">Palma de Mallorca</h2>
+                    <div class="popular_location">
+                        <a href="https://goo.gl/maps/3c4LjzrZRC3oknL5A" target="_blank"><i class="ri-map-pin-line"></i><span>Mallorca</span></a>
+                    </div>
+                </article>
+                <article class="popular_card">
+                    <div class="popular_image">
+                        <img src="img/popular/aranjuezpalacio.webp" alt="Real palace Aranjuez" class="popular_img">
+                        <div class="popular_shadow"></div>
+                    </div>
+                    <h2 class="popular_title">Palacio Real</h2>
+                    <div class="popular_location">
+                        <a href="https://goo.gl/maps/CZKjYZTFVe2kRa6A7" target="_blank"><i class="ri-map-pin-line"></i><span>Aranjuez</span></a>
+                    </div>
+                </article>
+                <article class="popular_card">
+                    <div class="popular_image">
+                        <img src="img/popular/ALCAZAR DE SEVILA.webp" alt="Alcazar de Sevilla" class="popular_img">
+                        <div class="popular_shadow"></div>
+                    </div>
+                    <h2 class="popular_title">Alcazar de Sevilla</h2>
+                    <div class="popular_location">
+                        <a href="https://goo.gl/maps/3e1Tv4qAemr5Yqnr6" target="_blank"><i class="ri-map-pin-line"></i><span>Sevilla</span></a>
+                    </div>
+                </article>
+                <article class="popular_card">
+                    <div class="popular_image">
+                        <img src="img/popular/CADIZ.webp" alt="Cadiz" class="popular_img">
+                        <div class="popular_shadow"></div>
+                    </div>
+                    <h2 class="popular_title">Cadiz</h2>
+                    <div class="popular_location">
+                        <a href="https://goo.gl/maps/bJWtyFkDLdr2LmL17" target="_blank"><i class="ri-map-pin-line"></i><span>Cadiz</span></a>
+                    </div>
+                </article>
+                <article class="popular_card">
+                    <div class="popular_image">
+                        <img src="img/popular/SAN SEBASTIAN_16_11zon.webp" alt="playa de la concha" class="popular_img">
+                        <div class="popular_shadow"></div>
+                    </div>
+                    <h2 class="popular_title">Playa de la concha</h2>
+                    <div class="popular_location">
+                        <a href="https://goo.gl/maps/oNdGZUoWHAH3z82v5" target="_blank"><i class="ri-map-pin-line"></i><span>San Sebastian</span></a>
+                    </div>
+                </article>
+            </div>
+            <!-- Carrousel iconic places -->
+            <div id="iconicplaces">
+                <h2>Hidden Gems</h2>
+                <div id="automatic-carousel">
+                    <div class="slide">
+                        <img src="img/carrousel/aqueduct-876321_1280.webp" alt="Image 1" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/architecture-3266791_1280.webp" alt="Image 2" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/architecture-3269011_1280.webp" alt="Image 3" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/casa-batllo-2674873_1920.webp" alt="Image 4" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/cathedral-1750016_1280.webp" alt="Image 5" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/church-5009221_1280.webp" alt="Image 6" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/church-6757964_1280.webp" alt="Image 7" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/city-7137958_1280.webp" alt="Image 8" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/culture-4408141_1280 (1).webp" alt="Image 9" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/fountain-510601_1280.webp" alt="Image 10" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/giralda-2064185_1280.webp" alt="Image 11" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/madrid-2179954_1280.webp" alt="Image 12" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/merida-2469759_1280.webp" alt="Image 13" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/park-2867683_1280.webp" alt="Image 14" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/royal-palace-1876479_1280.webp" alt="Image 15" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/sagrada-familia-552084_1280.webp" alt="Image 16" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/segovia-102656_1280.webp" alt="Image 17" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/spain-1849573_1280.webp" alt="Image 18" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/toledo-2043909_1280.webp" alt="Image 19" class="img-carrousel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrousel/tower-2064129_1280.webp" alt="Image 20" class="img-carrousel">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Explore the History section -->
+        <section class="explore section" id="explore">
+            <div class="explore_container">
+                <div class="explore_image">
+                    <img src="img/history/teatro-romano-298652_9_11zon.webp" alt="Teatro romano Merida" class="explore_img">
+                    <div class="explore_shadow"></div>
+                </div>
+                <div class="explore_content container grid">
+                    <div class="explore_data">
+                        <h2 class="section_title">
+                            Discover the <br> history
+                        </h2>
+                        <p class="explore_description">
+                            Spain has a uniquely spectacular wealth of monuments, the result of long centuries of history and a mix of cultures. This is the country of artists of universal renown such as Velázquez, Goya, Gaudí, Picasso, and Dalí, and here art and culture are celebrated intensely in so many different ways. Want to find out more?
+                        </p>
+                        <button type="button" class="button history_button" id="history-btn">Discover it <i class="ri-arrow-right-line"></i></button>
+                    </div>
+                    <!-- Added Explore content from javaScrip -->
+                    <div  id="history-content"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Join section -->
+        <section class="join section" id="join">
+            <div class="join_container container grid">
+                <div class="join_data">
+                    <h2 class="section_title" id="join-title">
+                        Your Journey <br> Starts Here
+                    </h2>
+                    <p class="join_description">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, neque!
+                    </p>
+                    <form action="post" class="join_form">
+                        <input type="email" placeholder="Enter your email" class="join_input" spellcheck="false">
+                        <button class="join_button button">
+                            Subscribe <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="join_image">
+                    <img src="img/plane-170984_1920_18_11zon.webp" alt="plane over the sky" class="join_img">
+                    <div class="join_shadow"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Form -->
+        <section class="contact_form">
+            <form onsubmit="event.preventDefault(); validateForm()" class="contact-form">
+                <h3 class="h_contact">Contact Us</h3>
+                <label class="label-contact" for="name">Name:</label>
+                <input type="text" class="contact-input" id="name" placeholder="Your name">
+                <small class="error"></small>
+                <label class="label-contact" for="email">Email:</label>
+                <input type="email" class="contact-input" id="email" placeholder="example@example.com">
+                <small class="error"></small>
+                <label class="label-contact" for="message">Message:</label>
+                <textarea id="message" class="contact-input" placeholder="Your message" rows="6"></textarea>
+                <small class="error"></small>
+                <div class="center">
+                    <button class="form_button button">
+                        Send it <i class="ri-arrow-right-line"></i>
+                    </button>
+                    <p id="success"></p>
+                    <p id="unSuccess"></p>
+                </div>
+            </form>
+        </section>
+        <!-- Rate section -->
+        <section  class="container_valid">
+            <div class="post-valid" id="post_valid">
+                <div class="text-valid">Thanks for rating us!</div>
+                <div class="edit-valid" id="edit_valid">EDIT</div>
+            </div>
+            <div class="star-widget" id="star_widget_valid">
+                <input type="radio" name="rate" id="rate-5">
+                <label class="fas fa-star .label-valid" for="rate-5"></label>
+                <input type="radio" name="rate" id="rate-4">
+                <label class="fas fa-star .label-valid" for="rate-4"></label>
+                <input type="radio" name="rate" id="rate-3">
+                <label class="fas fa-star .label-valid" for="rate-3"></label>
+                <input type="radio" name="rate" id="rate-2">
+                <label class="fas fa-star .label-valid" for="rate-2"></label>
+                <input type="radio" name="rate" id="rate-1">
+                <label class="fas fa-star .label-valid" for="rate-1"></label>
+                <form action="#" id="validate-stars">
+                    <header></header>
+                    <div class="textarea-valid">
+                        <textarea  id="validate-text" cols="30" placeholder="Describe your experience..." ></textarea>
+                    </div>
+                    <div class="valid-button">
+                        <button class="validate_button button" id="btn-validate">
+                            Post <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer_container container grid">
+            <div class="footer_content grid">
+                <div>
+                    <a href="#" class="footer_logo">Discover Spain</a>
+                    <p class="footer_description">
+                        This website is an unofficial tourism website about Spain. In the following links you can access to the different websites that provide information and services about Spain.
+                    </p>
+                </div>
+                <div class="footer_data grid">
+                    <div>
+                        <h3 class="footer_title">
+                            Discover More
+                        </h3>
+                        <ul class="footer_links">
+                            <li>
+                                <a href="https://www.tourspain.es/es/" class="footer_link">TourSpain</a>
+                            </li>
+                            <li>
+                                <a href="https://www.spain.info/en/" class="footer_link">Spain.info</a>
+                            </li>
+                            <li>
+                                <a href="https://turismo.gob.es/en-us/Paginas/Index.aspx" class="footer_link">Turismo</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="footer_title">
+                            Hotel Booking
+                        </h3>
+                        <ul class="footer_links">
+                            <li>
+                                <a href="https://www.booking.com/country/es.es.html" class="footer_link">Booking.com</a>
+                            </li>
+                            <li>
+                                <a href="https://es.hoteles.com/" class="footer_link">Hoteles.com</a>
+                            </li>
+                            <li>
+                                <a href="https://www.trivago.es/es/odr/hoteles-espa%C3%B1a?search=200-184" class="footer_link">Trivago.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="footer_title">
+                            Transport
+                        </h3>
+                        <ul class="footer_links">
+                            <li>
+                                <a href="https://www.iberiaexpress.com/" class="footer_link">Iberia</a>
+                            </li>
+                            <li>
+                                <a href="https://www.renfe.com/es/en" class="footer_link">Renfe</a>
+                            </li>
+                            <li>
+                                <a href="https://www.alsa.com/en/web/bus/home" class="footer_link">Alsa</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="footer_title">
+                            Concerts and Theaters
+                        </h3>
+                        <ul class="footer_links">
+                            <li>
+                                <a href="https://www.entradas.com/en/" class="footer_link">Entradas</a>
+                            </li>
+                            <li>
+                                <a href="https://www.ticketmaster.es/?language=en-us" class="footer_link">Ticketmaster</a>
+                            </li>
+                            <li>
+                                <a href="https://www.elcorteingles.es/entradas/" class="footer_link">El Corte Ingles</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Social Media -->
+            <div class="footer_group">
+                <div class="footer_social">
+                    <a href="https://www.instagram.com/" target="_blank" class="footer_social-link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" class="footer_social-link">
+                        <i class="ri-facebook-circle-fill"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/" target="_blank" class="footer_social-link">
+                        <i class="ri-tiktok-line"></i>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" class="footer_social-link">
+                        <i class="ri-youtube-fill"></i>
+                    </a>
+                </div>
+                <span class="footer_copy">
+                    &copy; 2023  <a href="mailto:pedr.olivares80'gmail.com">Pedro Olivares</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+    <script src="javScript/scrollreveal.min.js"></script>
+    <script src="javScript/scripts.js"></script>
+</body>
+</html>
