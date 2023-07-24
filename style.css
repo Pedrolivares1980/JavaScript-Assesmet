@@ -105,7 +105,7 @@ h4{
     color: var(--title-color);
     font-family: var(--second-font);
     font-weight: var(--font-semi-bold);
-};
+}
 
 ul{
     list-style: none;
