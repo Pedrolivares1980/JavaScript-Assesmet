@@ -1,30 +1,125 @@
+                    //MENU
 
-        //ADDING HTM TO THE DOM 
+    // SHOW MENU
+
+    let navMenu = document.getElementById('nav-menu');
+    let navToggle = document.getElementById('nav-toggle');
+    let navClose = document.getElementById('nav-close');
+
+    // Show menu
+
+    if(navToggle){
+        navToggle.addEventListener('click', () =>{navMenu.classList.add('show-menu')});
+    }
+
+    // Hidden menu
+    if(navClose){
+        navClose.addEventListener("click",() =>{navMenu.classList.remove('show-menu')});
+    }
+
+    // Remove menu mobile
+
+    let navLink = document.querySelectorAll('.nav_link');
+    let linkAction = () =>{
+        let navMenu = document.getElementById('nav-menu');
+        navMenu.classList.remove('show-menu');
+    }
+    navLink.forEach(n => n.addEventListener('click', linkAction));
+
+    // Scroll sections active link
+
+    let sections =document.querySelectorAll('main section[id]');
+
+    let scrollActive = () => {
+        let scrollY = window.scrollY;
+        sections.forEach(current => {
+            let sectionHeight = current.offsetHeight,
+            sectionTop = current.offsetTop -58,
+            sectionId = current.getAttribute('id'),
+            sectionsClass = document.querySelector(`.nav_menu a[href*= ${sectionId}]`);
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                sectionsClass.classList.add('active-link');
+            } else {
+                sectionsClass.classList.remove('active-link');
+            }
+        });
+    };
+    
+    window.addEventListener('scroll', scrollActive);
+    
+                // CLOCK
+    
+    // setInterval(renderClock, 1000);
+    
+    const clock = {
+        hourSpan: document.querySelector('.hour'),
+        minSpan: document.querySelector('.min'),
+        secSpan: document.querySelector('.sec'),
+        getClock: (clock) => {
+        return String(clock).length === 1
+            ? '0' + clock
+            : clock;
+        },
+        renderClock: () => {
+        const date = new Date();
+        clock.hourSpan.innerText = clock.getClock(date.getHours());
+        clock.minSpan.innerText = clock.getClock(date.getMinutes());
+        clock.secSpan.innerText = clock.getClock(date.getSeconds());
+        }
+    };
+    
+    setInterval(clock.renderClock, 1000);
+    
+    // Change background header
+    
+    let blurHeader = () =>{
+        let header =document.getElementById('header');
+        // When the scroll is greater than 50vh, add the blur-header class to the header tag
+        this.scrollY >= 50  ? header.classList.add('blur-header')
+                            :header.classList.remove('blur-header');
+    }
+    window.addEventListener('scroll', blurHeader);
+    
+    // Show Scroll up
+    
+    let scrollUp = () =>{
+        let scrollUp = document.getElementById('scroll-up');
+        // When the scroll is higher than 350vh, add the show-scroll class to the tag with the scrollup class
+        this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+                            : scrollUp.classList.remove('show-scroll');
+    }
+    window.addEventListener('scroll', scrollUp);
+    
+    // Scroll reveal animation
+    
+    let sr = ScrollReveal({
+        origin:'top',
+        distance:'60px',
+        duration:'2000',
+        delay: 400,
+        reset:true
+    })
+    
+    sr.reveal('.home_data, .explore_data, .footer_container');
+    sr.reveal('#homeCards', {delay: 600, distance: '100px', inteval: 100});
+    sr.reveal('.about_data, .join_image, .container_valid', {origin: 'right'});
+    sr.reveal('.about_image, .join_data, .contact_form', {origin: 'left'});
+    sr.reveal('.popular_container', {interval: 200});
+    
+    
+
+                                //ADDING HTML TO THE DOM
 
 
-// Add html to discover it
+            // Variables declaration
 
+// Discover content
 let discover = `<div class="youtubeVideo">
 <iframe  src="https://www.youtube.com/embed/wn1gtX4mtpk?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 <button  type="button" class="button" onclick="removeDiscoverContent()">Close it<i class="ri-arrow-right-line"></i></button>`;
 
- // appends discover content to discover_it
-function addDiscover(){
-    document.getElementById("discover_it").innerHTML = discover;
-}
-
-// Remove content to Society
-function removeDiscoverContent() {
-    var div = document.getElementById("discover_it");
-    div.innerHTML = "";
-}
-
-// Listeners
-document.getElementById ("discover-btn").addEventListener ("click", addDiscover, false);
-
-
-// Add content popular celebrations
+// Society content
 
 let society =  `<div class="society-population">
 <h3>What areas make up Spain?</h3>
@@ -48,23 +143,7 @@ Over 1.5 million inhabitants: Madrid and Barcelona.<br><br>Over 500,000 inhabita
 <button  type="button" class="button" onclick="removeAllContent()">Close it<i class="ri-arrow-right-line"></i></button>
 `;
 
- // Add content to Society
-function addSocietyPopulation(){
-    document.getElementById("societyPopulation").innerHTML = society;
-}
-
-// Remove content to Society
-function removeAllContent() {
-    var div = document.getElementById("societyPopulation");
-    div.innerHTML = "";
-}
-
-// Listeners
-document.getElementById ("societyPopulation-btn").addEventListener ("click", addSocietyPopulation, false);
-
-
-
-// History
+// History content
 
 let historyAddContent = `                        <div class="explore-history" id="monuments">
 <h3>Monuments and historical heritage</h3>
@@ -110,139 +189,54 @@ let historyAddContent = `                        <div class="explore-history" id
 </div>
 <button  type="button" class="button" onclick="removeHistoryContent()">Close it<i class="ri-arrow-right-line"></i></button>`;
 
- // appends discover content to enjoy it
+            // Functions
+
+ // appends discover content to discover_it
+
+function addDiscover(){
+    document.getElementById("discover_it").innerHTML = discover;
+}
+
+// Remove content to Society
+
+function removeDiscoverContent() {
+    var div = document.getElementById("discover_it");
+    div.innerHTML = "";
+}
+
+ // Add content to Society
+
+function addSocietyPopulation(){
+    document.getElementById("societyPopulation").innerHTML = society;
+}
+
+// Remove content to Society
+
+function removeAllContent() {
+    var div = document.getElementById("societyPopulation");
+    div.innerHTML = "";
+}
+
+ // Add content to History
+
 function addHistory(){
     document.getElementById("history-content").innerHTML = historyAddContent;
 }
 
-// Remove content to Society
+// Remove content to History
+
 function removeHistoryContent() {
     var div = document.getElementById("history-content");
     div.innerHTML = "";
 }
 
-// Listeners
+            // Listeners
+
+document.getElementById ("discover-btn").addEventListener ("click", addDiscover, false);
+document.getElementById ("societyPopulation-btn").addEventListener ("click", addSocietyPopulation, false);
 document.getElementById ("history-btn").addEventListener ("click", addHistory, false);
 
-
-            //MENU
-
-// SHOW MENU
-
-let navMenu = document.getElementById('nav-menu');
-let navToggle = document.getElementById('nav-toggle');
-let navClose = document.getElementById('nav-close');
-
-// Show menu
-
-if(navToggle){
-    navToggle.addEventListener('click', () =>{navMenu.classList.add('show-menu')});
-}
-
-// Hidden menu
-if(navClose){
-    navClose.addEventListener("click",() =>{navMenu.classList.remove('show-menu')});
-}
-
-// Remove menu mobile
-
-let navLink = document.querySelectorAll('.nav_link');
-let linkAction = () =>{
-    let navMenu = document.getElementById('nav-menu');
-    navMenu.classList.remove('show-menu');
-}
-navLink.forEach(n => n.addEventListener('click', linkAction));
-
-// Scroll sections active link
-
-let sections =document.querySelectorAll('main section[id]');
-
-let scrollActive = () => {
-    let scrollY = window.scrollY;
-    sections.forEach(current => {
-        let sectionHeight = current.offsetHeight,
-        sectionTop = current.offsetTop -58,
-        sectionId = current.getAttribute('id'),
-        sectionsClass = document.querySelector(`.nav_menu a[href*= ${sectionId}]`);
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            sectionsClass.classList.add('active-link');
-        } else {
-            sectionsClass.classList.remove('active-link');
-        }
-    });
-};
-
-window.addEventListener('scroll', scrollActive);
-
-
-
-
-            // CLOCK
-
-// setInterval(renderClock, 1000);
-
-const clock = {
-    hourSpan: document.querySelector('.hour'),
-    minSpan: document.querySelector('.min'),
-    secSpan: document.querySelector('.sec'),
-    getClock: (clock) => {
-    return String(clock).length === 1
-        ? '0' + clock
-        : clock;
-    },
-    renderClock: () => {
-    const date = new Date();
-    clock.hourSpan.innerText = clock.getClock(date.getHours());
-    clock.minSpan.innerText = clock.getClock(date.getMinutes());
-    clock.secSpan.innerText = clock.getClock(date.getSeconds());
-    }
-};
-
-setInterval(clock.renderClock, 1000);
-
-
-
-// Change background header
-
-let blurHeader = () =>{
-    let header =document.getElementById('header');
-    // When the scroll is greater than 50vh, add the blur-header class to the header tag
-    this.scrollY >= 50  ? header.classList.add('blur-header')
-                        :header.classList.remove('blur-header');
-}
-window.addEventListener('scroll', blurHeader);
-
-
-// Show Scroll up
-
-let scrollUp = () =>{
-    let scrollUp = document.getElementById('scroll-up');
-    // When the scroll is higher than 350vh, add the show-scroll class to the tag with the scrollup class
-    this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-                        : scrollUp.classList.remove('show-scroll');
-}
-window.addEventListener('scroll', scrollUp);
-
-
-// Scroll reveal animation
-
-let sr = ScrollReveal({
-    origin:'top',
-    distance:'60px',
-    duration:'2000',
-    delay: 400,
-    reset:true
-})
-
-sr.reveal('.home_data, .explore_data, .footer_container');
-sr.reveal('#homeCards', {delay: 600, distance: '100px', inteval: 100});
-sr.reveal('.about_data, .join_image, .container_valid', {origin: 'right'});
-sr.reveal('.about_image, .join_data, .contact_form', {origin: 'left'});
-sr.reveal('.popular_container', {interval: 200});
-
-
-
-            // Contact Form
+                    // Contact Form
 
 // get data
 
@@ -252,10 +246,7 @@ let message = document.getElementById('message');
 let success = document.getElementById('success');
 let errorNodes = document.querySelectorAll('.error');
 
-
-
 // Validate data
-
 
 function validateForm(){
 
@@ -304,8 +295,7 @@ function emailIsValid(email){
     return pattern.test(email);
 }
 
-
-// rate form
+                    // Rate form
 
 let btnValidate = document.querySelector('.validate_button');
 let postValidate = document.querySelector('.post-valid');
@@ -322,9 +312,7 @@ btnValidate.onclick = () => {
         return false;
     }
 
-
-
-// automatic carrousel
+                    // Carrousel
 
 let slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
@@ -339,4 +327,3 @@ function nextSlide() {
     slides[currentSlide].style.display = "block";
 }
 setInterval(nextSlide, 2000);
-
