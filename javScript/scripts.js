@@ -93,19 +93,19 @@ window.addEventListener('scroll', scrollActive);
     
     // Scroll reveal animation
     
-    let sr = ScrollReveal({
-        origin:'top',
-        distance:'60px',
-        duration:'3000',
-        delay: 400,
-        reset:true
-    })
+    // let sr = ScrollReveal({
+    //     origin:'top',
+    //     distance:'60px',
+    //     duration:'3000',
+    //     delay: 400,
+    //     reset:true
+    // })
     
-    sr.reveal('.home_data, .explore_data, .footer_container');
-    sr.reveal('#homeCards', {delay: 600, distance: '100px', inteval: 100});
-    sr.reveal('.about_data, .join_image, .container_valid', {origin: 'right'});
-    sr.reveal('.about_image, .join_data, .contact_form', {origin: 'left'});
-    sr.reveal('.popular_container', {interval: 200});
+    // sr.reveal('.home_data, .explore_data, .footer_container');
+    // sr.reveal('#homeCards', {delay: 600, distance: '100px', inteval: 100});
+    // sr.reveal('.about_data, .join_image, .container_valid', {origin: 'right'});
+    // sr.reveal('.about_image, .join_data, .contact_form', {origin: 'left'});
+    // sr.reveal('.popular_container', {interval: 200});
     
     
 
