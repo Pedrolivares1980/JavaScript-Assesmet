@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="img/flag-2105397_640.png" rel="icon" type="image/x-icon" >
+    <link href="img/bandera.png" rel="icon" type="image/x-icon" >
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6e8e90b3ac.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -160,7 +160,7 @@
                     </div>
                     <h2 class="popular_title">Teide</h2>
                     <div class="popular_location">
-                        <a href="https://goo.gl/maps/u2YGwEoTzuduKfVg6" target="_blank"><i class="ri-map-pin-line"></i><span>Tenerife</span></a>
+                        <a  href="https://goo.gl/maps/u2YGwEoTzuduKfVg6" target="_blank"><i class="ri-map-pin-line"></i><span>Tenerife</span></a>
                     </div>
                 </article>
                 <article class="popular_card">
@@ -303,31 +303,8 @@
                 </div>
             </div>
         </section>
-        <!-- Join section -->
-        <section class="join section" id="join">
-            <div class="join_container container grid">
-                <div class="join_data">
-                    <h2 class="section_title" id="join-title">
-                        Your Journey <br> Starts Here
-                    </h2>
-                    <p class="join_description">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, neque!
-                    </p>
-                    <form action="post" class="join_form">
-                        <input type="email" placeholder="Enter your email" class="join_input" spellcheck="false">
-                        <button class="join_button button">
-                            Subscribe <i class="ri-arrow-right-line"></i>
-                        </button>
-                    </form>
-                </div>
-                <div class="join_image">
-                    <img src="img/plane-170984_1920_18_11zon.webp" alt="plane over the sky" class="join_img">
-                    <div class="join_shadow"></div>
-                </div>
-            </div>
-        </section>
-        <!-- Contact Form -->
-        <section class="contact_form">
+            <!-- Contact Form -->
+        <section class="contact_form" id="join">
             <form onsubmit="event.preventDefault(); validateForm()" class="contact-form">
                 <h3 class="h_contact">Contact Us</h3>
                 <label class="label-contact" for="name">Name:</label>
@@ -340,7 +317,7 @@
                 <textarea id="message" class="contact-input" placeholder="Your message" rows="6"></textarea>
                 <small class="error"></small>
                 <div class="center">
-                    <button class="form_button button">
+                    <button type="submit" class="form_button button">
                         Send it <i class="ri-arrow-right-line"></i>
                     </button>
                     <p id="success"></p>
@@ -371,7 +348,7 @@
                         <textarea  id="validate-text" cols="30" placeholder="Describe your experience..." ></textarea>
                     </div>
                     <div class="valid-button">
-                        <button class="validate_button button" id="btn-validate">
+                        <button type="button" class="validate_button button" id="btn-validate">
                             Post <i class="ri-arrow-right-line"></i>
                         </button>
                     </div>

@@ -28,24 +28,25 @@
 
     // Scroll sections active link
 
-    let sections =document.querySelectorAll('main section[id]');
+let sections = document.querySelectorAll('main section[id]');
 
-    let scrollActive = () => {
-        let scrollY = window.scrollY;
-        sections.forEach(current => {
-            let sectionHeight = current.offsetHeight,
-            sectionTop = current.offsetTop -58,
-            sectionId = current.getAttribute('id'),
-            sectionsClass = document.querySelector(`.nav_menu a[href*= ${sectionId}]`);
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                sectionsClass.classList.add('active-link');
-            } else {
-                sectionsClass.classList.remove('active-link');
-            }
-        });
-    };
-    
-    window.addEventListener('scroll', scrollActive);
+let scrollActive = () => {
+let scrollY = window.scrollY;
+    sections.forEach(current => {
+    let sectionHeight = current.offsetHeight,
+        sectionTop = current.offsetTop - 50,
+        sectionId = current.getAttribute('id'),
+        sectionsClass = document.querySelector(`.nav_menu a[href*="${sectionId}"]`);
+        console.log(scrollY, sectionTop, sectionHeight, sections)
+    if (scrollY > sectionTop && scrollY <= (sectionTop + sectionHeight)) {
+        sectionsClass.classList.add('active-link');
+    } else {
+        sectionsClass.classList.remove('active-link');
+    }
+    });
+};
+
+window.addEventListener('scroll', scrollActive);
     
                 // CLOCK
     
@@ -95,7 +96,7 @@
     let sr = ScrollReveal({
         origin:'top',
         distance:'60px',
-        duration:'2000',
+        duration:'3000',
         delay: 400,
         reset:true
     })
@@ -312,7 +313,7 @@ btnValidate.onclick = () => {
         return false;
     }
 
-                    // Carrousel
+                // Carrousel
 
 let slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
