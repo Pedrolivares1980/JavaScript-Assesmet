@@ -1,6 +1,8 @@
 # JavaScript-Assesmet
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************
 
 This is an unofficial website about Spain, it has been created by me as part of the javaScript module in the UCDPA Full Stack Software Developer course.
+*****************************************************************************************************************************************************************************
 
 The website consists of a header, with a transparent navigation bar that adopts the blur effect from javaScript to maintain an appropriate contrast, also in mobile devices the navigation bar becomes hamburger-like.
 This page allows you to navigate through the different links in the menu or by scrolling to view the different sections, it has an effect of revealing the content from javaScript and the scroll bar has been modified by me to give it a more personal touch.
