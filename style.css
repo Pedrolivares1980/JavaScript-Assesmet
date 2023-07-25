@@ -547,7 +547,7 @@ img{
     height: 600px;
     margin: 0 auto;
     position: relative;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     overflow: hidden;
 }
 
@@ -647,7 +647,6 @@ img{
     margin-bottom: 20px;
     text-align: justify;
 }
-
 
 /* Form */
 
@@ -1271,3 +1270,6 @@ textarea::-webkit-scrollbar-thumb{
         width: 800px;
     }
 }
+
+/* quiz */
+
