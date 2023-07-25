@@ -237,6 +237,22 @@ document.getElementById ("discover-btn").addEventListener ("click", addDiscover,
 document.getElementById ("societyPopulation-btn").addEventListener ("click", addSocietyPopulation, false);
 document.getElementById ("history-btn").addEventListener ("click", addHistory, false);
 
+                    // Carrousel
+
+let slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+function nextSlide() {
+    currentSlide++;
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+    slides.forEach(function(slide) {
+        slide.style.display = "none";
+    });
+    slides[currentSlide].style.display = "block";
+}
+setInterval(nextSlide, 2000);
+
                     // Contact Form
 
 // get data
@@ -312,19 +328,3 @@ btnValidate.onclick = () => {
     }
         return false;
     }
-
-                // Carrousel
-
-let slides = document.querySelectorAll(".slide");
-let currentSlide = 0;
-function nextSlide() {
-    currentSlide++;
-    if (currentSlide >= slides.length) {
-        currentSlide = 0;
-    }
-    slides.forEach(function(slide) {
-        slide.style.display = "none";
-    });
-    slides[currentSlide].style.display = "block";
-}
-setInterval(nextSlide, 2000);
