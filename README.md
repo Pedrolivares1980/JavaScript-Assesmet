@@ -12,3 +12,6 @@ In the following section about diversity we can find several pictures of emblema
 The next section is about history, clicking on the button will import relevant content from javaScript.
 And the last section before the footer is a contact form validated from javaScript and a form of valuation of the page, five stars appear that when you pass the mouse over them are marked and when you click on the score remains and opens a box for comments, once sent the comment gives the possibility to return to edit it.
 Finally in the footer I have compiled a number of links to official websites that may be of help on a trip to or through Spain, as well as a link to my email and social media icons.
+
+*****************************************************************************************************************************************************************************
+  All data has been collected from the Spanish tourism website or the Spain.info tourism page, the images have been taken from different pages and are free of rights
